@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Planner | Bodas Exclusivas y Elegantes</title>
+    <meta name="description"
+        content="Organización de bodas de lujo y eventos exclusivos. Creamos momentos inolvidables con elegancia y sofisticación.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Mobile Redirect Logic -->
+    <script>
+        if (window.innerWidth <= 768) {
+            // Redirect to mobile version if screen width is 768px or less
+            // Use replace to avoid back-button loops
+            window.location.replace("mobile.html");
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/56943997250" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Creando Memorias Eternas</h1>
+            <p class="fade-in delay-1">Lujo, Elegancia y Perfección para su Gran Día</p>
+            <a href="#contacto" class="btn btn-primary fade-in delay-2">Planifica tu Boda</a>
+        </div>
+    </header>
+
+    <!-- Packages Section -->
+    <section id="paquetes" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Paquetes</h2>
+            <p class="section-subtitle">Experiencias diseñadas a medida</p>
+
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <article class="package-card">
+                    <div class="package-header">
+                        <h3>Esencia</h3>
+                        <div class="price">Desde $1,500</div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li>Coordinación del Día D</li>
+                            <li>Cronograma detallado</li>
+                            <li>Confirmación de proveedores</li>
+                            <li>supervisión de montaje (4 hrs)</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline" onclick="selectPackage('Esencia')">Seleccionar</a>
+                    </div>
+                </article>
+
+                <!-- Package 2 (Featured) -->
+                <article class="package-card featured">
+                    <div class="ribbon">Más Popular</div>
+                    <div class="package-header">
+                        <h3>Platino</h3>
+                        <div class="price">Desde $3,000</div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li>Planificación Parcial (6 meses)</li>
+                            <li>Selección de proveedores</li>
+                            <li>Diseño de concepto y estilo</li>
+                            <li>Coordinación completa del evento</li>
+                            <li>Asistencia en ensayos</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-primary" onclick="selectPackage('Platino')">Seleccionar</a>
+                    </div>
+                </article>
+
+                <!-- Package 3 -->
+                <article class="package-card">
+                    <div class="package-header">
+                        <h3>Diamante</h3>
+                        <div class="price">A Consultar</div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li>Planificación Integral (12+ meses)</li>
+                            <li>Gestión de presupuesto</li>
+                            <li>Diseño escenográfico exclusivo</li>
+                            <li>Concierge para invitados</li>
+                            <li>Post-boda y Luna de Miel</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline" onclick="selectPackage('Diamante')">Seleccionar</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Aesthetic Section -->
+    <section class="aesthetic-section">
+        <div class="container">
+            <div class="quote-box">
+                <blockquote>
+                    "El amor se compone de una sola alma que habita en dos cuerpos."
+                </blockquote>
+                <cite>- Aristóteles</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Comienza tu Historia</h2>
+            <p class="section-subtitle">Cuéntanos sobre tu día soñado</p>
+
+            <form id="weddingForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Fecha Tentativa</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Invitados Aprox.</label>
+                        <input type="number" id="guests" name="guests" placeholder="100">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="style">Estilo de Boda</label>
+                    <select id="style" name="style">
+                        <option value="clasica">Clásica & Tradicional</option>
+                        <option value="moderna">Moderna & Minimalista</option>
+                        <option value="boho">Boho chic</option>
+                        <option value="playa">Playa / Destino</option>
+                        <option value="lujo" selected>Lujo & Glamour</option>
+                        <option value="rustica">Rústica / Campo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Detalles Adicionales</label>
+                    <textarea id="message" name="message" rows="4"
+                        placeholder="Cuéntanos más sobre tu visión..."></textarea>
+                </div>
+
+                <!-- Hidden field for selected package -->
+                <input type="hidden" id="selectedPackage" name="package">
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span id="btnText">Enviar Solicitud</span>
+                    <span id="btnLoader" class="loader" style="display:none;"></span>
+                </button>
+                <p id="formStatus" class="form-status"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>Wedding Planner</h4>
+                    <p>Haciendo realidad los sueños más exigentes.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Pinterest</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wedding Planner. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
